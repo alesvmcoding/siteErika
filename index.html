@@ -1,0 +1,581 @@
+<!doctype html>
+<html lang="pt-BR">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="theme-color" content="#f8f6f1">
+  <meta name="description" content="Érika Sales Vieira, Psicóloga Infantil em São José dos Campos (SP). Psicoterapia infantil, ABA (Applied Behavior Analysis), acompanhamento terapêutico e orientação parental.">
+  <meta name="robots" content="index,follow">
+  <title>Érika Sales Vieira | Psicóloga Infantil em São José dos Campos</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Caveat:wght@500;600&family=DM+Serif+Display&family=Instrument+Sans:wght@400;500;600;700&display=swap" rel="stylesheet">
+  <style>
+    /* IDENTIDADE VISUAL: personalize estas variáveis com as cores da sua marca. */
+    :root {
+      --color-ink: #315463;
+      --color-muted: #50636b;
+      --color-primary: #315463;
+      --color-primary-dark: #274753;
+      --color-accent: #a35f43;
+      --color-paper: #f7f3e8;
+      --color-white: #fffdf7;
+      --color-soft: #91b9ac;
+      --color-line: #c4d1cb;
+      --color-orange: #f0a64e;
+      --color-sage: #91b9ac;
+      --color-cream: #f0e5c5;
+      --font-body: "Instrument Sans", sans-serif;
+      --font-heading: "Instrument Sans", sans-serif;
+      --font-accent: "Caveat", cursive;
+      --content-width: 1140px;
+      --radius: 8px;
+      --shadow: 0 18px 55px rgba(38, 59, 53, .09);
+    }
+    *, *::before, *::after { box-sizing: border-box; }
+    html { scroll-behavior: smooth; scroll-padding-top: 90px; }
+    body { margin: 0; background-color: var(--color-paper); background-image: repeating-linear-gradient(0deg, rgba(41,73,87,.012) 0 1px, transparent 1px 4px), repeating-linear-gradient(90deg, rgba(255,255,255,.16) 0 1px, transparent 1px 5px); color: var(--color-ink); font: 16px/1.65 var(--font-body); -webkit-font-smoothing: antialiased; }
+    img { max-width: 100%; display: block; }
+    a { color: inherit; }
+    button, a { -webkit-tap-highlight-color: transparent; }
+    a:focus-visible, button:focus-visible, summary:focus-visible { outline: 3px solid var(--color-accent); outline-offset: 4px; border-radius: 1.32px; }
+    .skip-link { position: absolute; left: 1rem; top: -5rem; z-index: 1000; background: var(--color-ink); color: white; padding: .7rem 1rem; }
+    .skip-link:focus { top: 1rem; }
+    .container { width: min(calc(100% - 40px), var(--content-width)); margin-inline: auto; }
+    .eyebrow { margin: 0 0 12px; color: var(--color-primary); font-size: .76rem; font-weight: 700; letter-spacing: .14em; text-transform: uppercase; }
+    h1, h2, h3, p { margin-top: 0; }
+    h1, h2, h3 { line-height: 1.1; -webkit-text-stroke: .35px #fff; paint-order: stroke fill; }
+    h1, h2 { font-family: var(--font-heading); font-weight: 700; letter-spacing: -.04em; }
+    h1 { position: relative; max-width: 700px; margin-bottom: 24px; font-size: clamp(3.1rem, 8.5vw, 6.2rem); }
+    h2 { margin-bottom: 20px; font-size: clamp(2.5rem, 5.3vw, 4rem); }
+    h3 { margin-bottom: 10px; font: 700 1.3rem/1.2 var(--font-heading); }
+    .lead { max-width: 650px; color: var(--color-muted); font-size: clamp(1.05rem, 2vw, 1.2rem); }
+    .section { padding: 96px 0; }
+    .section-heading { max-width: 760px; margin-bottom: 42px; }
+    .section-heading p:last-child { margin-bottom: 0; color: var(--color-muted); }
+    .button { display: inline-flex; min-height: 52px; align-items: center; justify-content: center; gap: 12px; border: 0; border-radius: var(--radius); padding: 13px 22px; background: var(--color-primary); color: #fff; font: 700 .94rem var(--font-body); text-decoration: none; }
+    .button:hover { border: 0; background: var(--color-primary); color: #fff; }
+    .button span { display: inline-block; }
+    .button-outline { border: 0; background: transparent; color: var(--color-primary-dark); }
+    .button-outline:hover { border: 0; background: transparent; color: var(--color-primary-dark); }
+    .button svg, .text-link svg { width: 18px; height: 18px; flex: 0 0 auto; }
+
+    /* Brilho de vidro discreto e textura fina para os planos principais. */
+    .service-card, .step, .location-card, .map-frame, .location-gallery figure, .contact-panel, .instagram-post {
+      box-shadow: inset 0 1px 0 rgba(255,255,255,.82), 0 9px 24px rgba(39,67,71,.07);
+    }
+    .service-card, .step, .contact-panel, .instagram-post {
+      background-image: linear-gradient(135deg, rgba(255,255,255,.58), rgba(255,255,255,.08) 50%, rgba(220,233,227,.16));
+      backdrop-filter: blur(7px) saturate(112%);
+    }
+    .location-card { background-image: linear-gradient(135deg, rgba(255,255,255,.15), transparent 55%, rgba(255,255,255,.06)); }
+    .hero, .instagram-section {
+      background-image: radial-gradient(circle at 1px 1px, rgba(41,73,87,.055) .65px, transparent .85px);
+      background-size: 16px 16px;
+    }
+    .instagram-section { background-color: rgba(248,245,236,.78); }
+    .photo-sheen { position: absolute; inset: 0; z-index: 2; pointer-events: none; background: linear-gradient(128deg, rgba(255,255,255,.42), transparent 26%, transparent 66%, rgba(255,255,255,.12) 82%, transparent); mix-blend-mode: screen; opacity: .56; }
+    .portrait-frame, .about-art, .location-gallery figure, .brand-mark { position: relative; }
+
+    /* Cabeçalho fixo e navegação mobile. */
+    .site-header { position: sticky; top: 0; z-index: 50; border-bottom: 1px solid rgba(217,224,217,.55); background: rgba(248,246,241,.72); backdrop-filter: blur(14px); }
+    .nav-wrap { display: flex; min-height: 76px; align-items: center; justify-content: space-between; gap: 22px; }
+    .brand { display: inline-flex; align-items: center; gap: 10px; color: var(--color-ink); font-weight: 700; text-decoration: none; white-space: nowrap; }
+    .brand-mark { position: relative; display: block; width: 38px; height: 38px; flex: 0 0 38px; overflow: hidden; border-radius: 50%; background: var(--color-soft); }
+    .brand-mark img { position: absolute; inset: 0; width: 100%; height: 100%; object-fit: cover; object-position: center 25%; transform: scale(1.35); transform-origin: center top; }
+    .nav-links { display: flex; align-items: center; gap: clamp(12px, 2.3vw, 28px); margin: 0; padding: 0; list-style: none; }
+    .nav-links a { color: var(--color-muted); font-size: .88rem; font-weight: 600; text-decoration: none; }
+    .nav-links a:hover { color: var(--color-primary-dark); }
+    .nav-cta { min-height: 44px; padding: 10px 16px; font-size: .83rem; }
+    .menu-toggle { display: none; width: 44px; height: 44px; border: 0; border-radius: 50%; background: transparent; color: var(--color-ink); cursor: pointer; }
+    .menu-toggle svg { width: 21px; height: 21px; }
+
+    /* Hero */
+    .hero { position: relative; overflow: hidden; padding: 104px 0 116px; }
+    .hero::before { position: absolute; top: -170px; right: -100px; width: 570px; height: 570px; border-radius: 46% 54% 62% 38% / 44% 48% 52% 56%; background: var(--color-soft); content: ""; opacity: .65; transform: rotate(9deg); }
+    .hero-grid { position: relative; display: grid; grid-template-columns: 1.08fr .92fr; align-items: center; gap: clamp(44px, 8vw, 110px); }
+    .hero-copy { padding: 24px 0; }
+    .hero-copy .lead { margin-bottom: 28px; }
+    .hero-actions { display: flex; flex-wrap: wrap; gap: 12px; }
+    .hero-note { display: flex; align-items: center; gap: 12px; max-width: 650px; margin-top: 28px; color: var(--color-muted); font-size: 1rem; }
+    .hero-note svg { width: 19px; height: 19px; color: var(--color-primary); }
+    .portrait-frame { position: relative; display: flex; min-height: 760px; align-items: flex-end; justify-content: center; overflow: visible; border: 0; border-radius: 0; background: transparent; box-shadow: none; }
+    .portrait-frame > img { position: relative; inset: auto; width: 145%; height: auto; max-height: 760px; object-fit: contain; object-position: center bottom; }
+    .portrait-placeholder { position: absolute; inset: 64px; display: grid; place-content: center; justify-items: center; border: 1px dashed rgba(49,83,71,.42); border-radius: 13.8% 13.8% 6.6px 6.6px; color: var(--color-primary-dark); text-align: center; }
+    .portrait-placeholder svg { width: 58px; height: 58px; margin-bottom: 14px; opacity: .72; }
+    .portrait-placeholder strong { font-size: .95rem; }
+    .portrait-placeholder span { max-width: 190px; margin-top: 5px; color: var(--color-muted); font-size: .78rem; }
+
+    /* Sobre e serviços */
+    .about { background: var(--color-sage); }
+    .about-grid { display: grid; grid-template-columns: .9fr 1.1fr; gap: clamp(40px, 6vw, 72px); align-items: center; }
+    .about-art { min-height: 490px; position: relative; border: 0; border-radius: 0; background: transparent; overflow: visible; }
+    .about-art > img { position: absolute; inset: 0 0 42px; width: 100%; height: calc(100% - 42px); object-fit: cover; object-position: center 28%; }
+    .about-art-label { position: absolute; inset: auto 0 0; display: block; padding: 6px 18px 10px; background: transparent; color: var(--color-ink); text-align: center; }
+    .about-art-label span { max-width: 280px; font-size: .9rem; }
+    .about-copy p { color: var(--color-muted); }
+    .credential { display: flex; gap: 13px; align-items: flex-start; margin-top: 30px; padding: 17px 0; border: 0; border-radius: var(--radius); background: transparent; box-shadow: none; backdrop-filter: none; }
+    .credential svg { width: 22px; height: 22px; flex: 0 0 auto; color: var(--color-primary); }
+    .credential p { margin: 0; color: var(--color-ink); font-size: .9rem; }
+    .services-grid { display: grid; grid-template-columns: repeat(2, minmax(0,1fr)); gap: 22px; }
+    .service-card { min-height: 250px; padding: 28px; border: 1px solid var(--color-line); border-radius: var(--radius); background: rgba(255,254,250,.72); }
+    .service-icon { display: grid; width: 54px; height: 54px; margin-bottom: 20px; place-items: center; border-radius: var(--radius); background: var(--color-soft); color: var(--color-primary); }
+    .service-icon svg { width: 26px; height: 26px; }
+    .service-card p { margin-bottom: 0; color: var(--color-muted); font-size: .96rem; }
+
+    /* Etapas do cuidado */
+    .process { background: var(--color-orange); }
+    .steps { display: grid; grid-template-columns: repeat(4, minmax(0,1fr)); gap: 16px; counter-reset: steps; }
+    .step { position: relative; padding: 26px; border: 1px solid rgba(41,73,87,.16); border-radius: var(--radius); background: rgba(255,254,250,.68); counter-increment: steps; }
+    .step::before { display: grid; width: 44px; height: 44px; margin-bottom: 22px; border-radius: 50%; background: var(--color-white); color: var(--color-primary); font-weight: 700; content: counter(steps, decimal-leading-zero); place-items: center; }
+    .step p { margin-bottom: 0; color: var(--color-muted); font-size: .94rem; }
+
+    /* Local de atendimento */
+    .location-grid { display: grid; grid-template-columns: .72fr 1.28fr; gap: 34px; align-items: stretch; }
+    .location-card { padding: 34px 30px; border: 1px solid rgba(255,255,255,.18); border-radius: var(--radius); background: rgba(39,70,81,.86); color: white; }
+    .location-card .eyebrow { color: #d4e4d8; }
+    .location-card h2 { font-size: clamp(2rem,4vw,2.8rem); }
+    .location-card p { color: #e3ece5; }
+    .location-line { display: flex; gap: 12px; margin-top: 22px; align-items: flex-start; }
+    .location-line svg { width: 21px; height: 21px; flex: 0 0 auto; color: #d8b08c; }
+    .location-line span { font-size: .92rem; }
+    .map-frame { min-height: 350px; overflow: hidden; border-radius: var(--radius); background: var(--color-soft); }
+    .map-frame iframe { width: 100%; height: 100%; min-height: 350px; border: 0; }
+    .map-caption { margin: 10px 0 0; color: var(--color-muted); font-size: .8rem; }
+    .location-gallery { display: grid; grid-template-columns: 1fr 1fr; gap: 20px; margin-top: 30px; }
+    .location-gallery figure { margin: 0; overflow: hidden; border: 1px solid #fff; border-radius: var(--radius); background: rgba(255,254,250,.76); }
+    .location-gallery img { width: 100%; height: 290px; object-fit: cover; }
+    .location-gallery figure:nth-child(2) img { height: 290px; }
+    .location-gallery .photo-sheen { bottom: 42px; }
+    .location-gallery figcaption { padding: 10px 14px; color: var(--color-muted); font-size: .85rem; }
+
+    /* FAQ, contato e rodapé */
+    .faq { background: var(--color-white); }
+    .faq-layout { display: grid; grid-template-columns: .78fr 1.22fr; gap: clamp(45px, 8vw, 112px); }
+    .faq-layout .section-heading { max-width: 430px; }
+    .faq-list details { border-bottom: 1px solid var(--color-line); }
+    .faq-list summary { position: relative; padding: 21px 36px 21px 0; color: var(--color-ink); font: 700 1.05rem/1.4 var(--font-body); cursor: pointer; list-style: none; }
+    .faq-list summary::-webkit-details-marker { display: none; }
+    .faq-list summary::after { position: absolute; right: 4px; top: 19px; color: var(--color-accent); font: 500 1.35rem/1 var(--font-body); content: "+"; }
+    .faq-list details[open] summary::after { content: "−"; }
+    .faq-list details p { max-width: 650px; padding: 0 24px 18px 0; margin: 0; color: var(--color-muted); }
+    /* Carrossel de capas do Instagram, sem interface incorporada da plataforma. */
+    .instagram-section { background: var(--color-paper); }
+    .instagram-carousel { position: relative; }
+    .instagram-track { display: grid; grid-auto-columns: calc((100% - 36px) / 3); grid-auto-flow: column; gap: 18px; overflow-x: auto; padding: 3px 3px 16px; scroll-snap-type: x mandatory; scrollbar-width: none; }
+    .instagram-track::-webkit-scrollbar { display: none; }
+    .instagram-post { position: relative; display: grid; aspect-ratio: 1; min-width: 0; overflow: hidden; scroll-snap-align: start; place-items: center; border: 1px solid var(--color-line); border-radius: 6px; background: rgba(220,233,227,.7); text-decoration: none; }
+    .instagram-post img { display: block; width: auto; height: auto; max-width: 100%; max-height: 100%; margin: auto; object-fit: contain; object-position: center; }
+    .instagram-post:hover img { transform: none; }
+    .instagram-post:focus-visible { outline: 3px solid var(--color-accent); outline-offset: 4px; }
+    .instagram-carousel::before, .instagram-carousel::after { position: absolute; top: 50%; z-index: 2; display: grid; width: 38px; height: 38px; place-items: center; border: 1px solid var(--color-line); border-radius: 50%; background: rgba(255,254,250,.92); color: var(--color-ink); font-size: 1.25rem; line-height: 1; opacity: 0; pointer-events: none; transform: translateY(-50%); transition: opacity .15s ease; }
+    .instagram-carousel::before { left: 10px; content: "←"; }
+    .instagram-carousel::after { right: 10px; content: "→"; }
+    .instagram-carousel.is-pointing-left::before, .instagram-carousel.is-pointing-right::after { opacity: 1; }
+    .contact { padding: 96px 0; background: rgba(220,233,227,.78); }
+    .contact-panel { display: grid; grid-template-columns: 1.2fr .8fr; gap: clamp(32px, 8vw, 100px); align-items: center; padding: clamp(34px, 6vw, 64px); border: 1px solid var(--color-line); border-radius: var(--radius); background: rgba(255,254,250,.8); box-shadow: var(--shadow); }
+    .contact-panel h2 { max-width: 600px; margin-bottom: 12px; }
+    .contact-panel p { max-width: 610px; margin-bottom: 0; color: var(--color-muted); }
+    .contact-links { display: flex; flex-direction: column; align-items: flex-start; gap: 17px; }
+    .text-link { display: inline-flex; align-items: center; gap: 9px; color: var(--color-primary-dark); font-size: .92rem; font-weight: 700; line-height: 1.35; text-decoration: none; }
+    .contact-links .text-link { min-height: 28px; }
+    .contact-links .text-link svg { display: block; }
+    .text-link:hover { text-decoration: underline; }
+    .footer { padding: 38px 0; background: var(--color-ink); color: #f6f4ee; }
+    .footer-inner { display: flex; flex-wrap: wrap; justify-content: space-between; gap: 12px 24px; align-items: center; }
+    .footer p { margin: 0; color: #d5dfd7; font-size: .82rem; }
+    .footer-name { color: white !important; font-weight: 700; }
+    .whatsapp-float { position: fixed; right: 20px; bottom: 20px; z-index: 40; display: grid; width: 58px; height: 58px; place-items: center; border: 0; border-radius: 50%; background: #25D366; color: white; box-shadow: none; }
+    .whatsapp-float:hover { transform: none; }
+    .whatsapp-float svg { width: 28px; height: 28px; }
+    .sr-only { position: absolute; width: 1px; height: 1px; padding: 0; margin: -1px; overflow: hidden; clip: rect(0,0,0,0); white-space: nowrap; border: 0; }
+    [data-reveal] { opacity: 0; transform: translateY(16px); transition: opacity .65s ease, transform .65s ease; }
+    [data-reveal].is-visible { opacity: 1; transform: none; }
+    @media (prefers-reduced-motion: reduce) { *, *::before, *::after { scroll-behavior: auto !important; transition-duration: .01ms !important; animation-duration: .01ms !important; } [data-reveal] { opacity: 1; transform: none; } }
+    @media (max-width: 900px) {
+      .nav-links { gap: 12px; }
+      .nav-links a { font-size: .8rem; }
+      .services-grid { grid-template-columns: 1fr 1fr; }
+      .steps { grid-template-columns: repeat(2, minmax(0,1fr)); }
+      .about-grid { grid-template-columns: .9fr 1.1fr; gap: 34px; }
+      .about-art { min-height: 430px; }
+      .instagram-track { grid-auto-columns: calc((100% - 18px) / 2); }
+    }
+    @media (max-width: 720px) {
+      .container { width: min(calc(100% - 32px), var(--content-width)); }
+      .section { padding: 76px 0; }
+      .nav-wrap { min-height: 68px; }
+      .menu-toggle { display: grid; place-items: center; margin-left: auto; }
+      .nav-cta { display: none; }
+      .nav-links { position: absolute; top: calc(100% + 1px); left: 0; right: 0; display: none; padding: 12px 20px 20px; border-bottom: 1px solid var(--color-line); background: var(--color-paper); box-shadow: 0 15px 22px rgba(38,59,53,.07); }
+      .nav-links.is-open { display: grid; gap: 0; }
+      .nav-links li a { display: block; padding: 12px 4px; font-size: .95rem; }
+      .hero { padding: 62px 0 82px; }
+      .hero-grid { grid-template-columns: 1fr; gap: 28px; }
+      .hero-copy { padding: 10px 0 0; }
+      .hero::before { top: 36%; right: -160px; width: 420px; height: 420px; }
+      h1 { font-size: clamp(3rem, 13vw, 5rem); }
+      h2 { font-size: clamp(2.35rem, 10vw, 3.5rem); }
+      .portrait-frame { min-height: 559px; width: min(100%, 440px); margin: 0 auto; }
+      .portrait-frame > img { width: 130%; max-height: 559px; }
+      .about-grid, .location-grid, .faq-layout { grid-template-columns: 1fr; gap: 32px; }
+      .about-art { min-height: 380px; width: min(100%, 500px); margin: 0 auto; order: 2; }
+      .services-grid { grid-template-columns: 1fr; }
+      .service-card:nth-child(2) { margin-top: 0; }
+      .steps { grid-template-columns: repeat(2, minmax(0,1fr)); }
+      .step { padding: 22px; }
+      .map-frame, .map-frame iframe { min-height: 300px; }
+      .location-gallery { grid-template-columns: 1fr; }
+      .location-gallery img, .location-gallery figure:nth-child(2) img { height: 260px; }
+      .contact-panel { grid-template-columns: 1fr; }
+      .contact-links { flex-direction: column; align-items: flex-start; gap: 14px; }
+      .contact-links .button { max-width: 100%; }
+      .instagram-track { grid-auto-columns: minmax(220px, 72vw); gap: 14px; }
+    }
+    @media (max-width: 560px) {
+      .steps { grid-template-columns: 1fr; }
+    }
+    @media (max-width: 430px) {
+      .service-card { min-height: auto; }
+      .hero-actions { align-items: stretch; flex-direction: column; }
+      .hero-actions .button { width: 100%; }
+      .footer-inner { align-items: flex-start; flex-direction: column; }
+      .whatsapp-float { right: 14px; bottom: 14px; width: 54px; height: 54px; }
+    }
+
+    /* Visual restaurado para a versão anterior à reformulação geral. */
+    :root {
+      --color-ink: #294957;
+      --color-muted: #53666b;
+      --color-primary: #315563;
+      --color-primary-dark: #274651;
+      --color-accent: #a85f45;
+      --color-paper: #f4f3f6;
+      --color-white: #fffefa;
+      --color-soft: #e2e6ee;
+      --color-line: #d0d5df;
+      --color-orange: #efa64f;
+      --color-sage: #91b9ac;
+      --color-cream: #f0e5c5;
+      --color-lavender: #8798b6;
+      --color-lavender-light: #dce2ec;
+      --color-blush: #d7bbc4;
+      --color-blush-light: #f0e5e9;
+      --font-heading: "Instrument Sans", sans-serif;
+      --radius: 7.2px;
+    }
+    body { background: var(--color-paper); line-height: 1.7; }
+    h1, h2, h3 { line-height: 1.14; }
+    h1, h2 { font-weight: 600; letter-spacing: -.035em; }
+    h1 { max-width: 700px; margin-bottom: 20px; font-size: clamp(2.8rem, 8vw, 5.6rem); }
+    h2 { margin-bottom: 18px; font-size: clamp(2.25rem, 5vw, 3.7rem); }
+    h3 { font: 700 1.12rem/1.2 var(--font-heading); }
+    .section { padding: 92px 0; }
+    .button { border: 1px solid transparent; border-radius: 299.7px; padding: 13px 22px; transition: background .2s ease, transform .2s ease; }
+    .button:hover { background: var(--color-primary-dark); transform: translateY(-2px); }
+    .button-outline { border-color: var(--color-primary); background: transparent; color: var(--color-primary-dark); }
+    .button-outline:hover { background: var(--color-soft); }
+    .service-card, .step, .location-card, .map-frame, .location-gallery figure, .contact-panel, .instagram-post {
+      box-shadow: none;
+      backdrop-filter: none;
+      background-image: none;
+    }
+    .hero { padding: 76px 0 82px; background: none; }
+    .hero::before { display: none; }
+    .hero-grid { grid-template-columns: 1.15fr .85fr; gap: 56px; }
+    .hero-note { gap: 10px; margin-top: 26px; font-size: .88rem; }
+    .portrait-frame { min-height: 0; aspect-ratio: 1.15; overflow: hidden; border: 0; border-radius: 6px; background: var(--color-lavender); box-shadow: var(--shadow); isolation: isolate; }
+    .portrait-frame::before { position: absolute; z-index: 0; inset: -8px; background: url("fotos/espaco-atendimento.jpg") center 52% / cover; content: ""; filter: blur(4px); transform: scale(1.035); }
+    .portrait-frame::after { position: absolute; z-index: 1; inset: 0; background: linear-gradient(105deg, rgba(240,229,233,.44), rgba(135,152,182,.34)); content: ""; }
+    .portrait-frame > img { position: absolute; z-index: 2; inset: auto 0 0 auto; width: auto; height: 100%; max-width: 74%; object-fit: contain; object-position: right bottom; }
+    .portrait-frame > img.portrait-foreground { right: 3%; height: 100%; max-width: 74%; }
+    .hero-stamp { right: 4px; bottom: 25px; width: 108px; height: 108px; }
+    .about { background: var(--color-blush-light); }
+    .about-grid { grid-template-columns: .82fr 1.18fr; gap: 70px; }
+    .about-art { min-height: 390px; border: 0; border-radius: var(--radius); background: var(--color-soft); overflow: hidden; }
+    .about-art > img { position: absolute; inset: 0; width: 100%; height: 100%; object-fit: cover; object-position: center 28%; }
+    .about-art-label { inset: auto 0 0; padding: 36px 20px 18px; background: linear-gradient(transparent, rgba(25,45,43,.72)); color: white; text-align: left; }
+    .about-art-label span { max-width: none; font-size: .9rem; }
+    .credential { margin-top: 24px; padding: 17px; border: 1px solid var(--color-line); border-radius: 4.8px; background: var(--color-white); }
+    .services-grid { grid-template-columns: repeat(4, 1fr); gap: 16px; }
+    .service-card { min-height: 255px; padding: 25px 22px; border: 1px solid var(--color-line); border-radius: 6px; background: var(--color-white); transition: transform .2s ease, box-shadow .2s ease; }
+    .service-card:hover { transform: translateY(-4px); box-shadow: var(--shadow); }
+    .service-icon { width: 48px; height: 48px; margin-bottom: 25px; border-radius: 4.5px; }
+    .step { padding: 26px 24px 24px; border-radius: 6px; background: var(--color-white); }
+    .step::before { width: 38px; height: 38px; margin-bottom: 20px; background: var(--color-primary); }
+    .process { position: relative; isolation: isolate; overflow: hidden; background: var(--color-lavender-light); }
+    .process::before, .process::after { position: absolute; z-index: -1; inset: 0; content: ""; pointer-events: none; }
+    .process::before { inset: -10px; background: url("fotos/espaco-atendimento.jpg") center 56% / cover; filter: blur(5px); transform: scale(1.03); }
+    .process::after { background: rgba(220,226,236,.68); }
+    .process > .container { position: relative; z-index: 1; }
+    .steps { grid-template-columns: repeat(3, minmax(0,1fr)); }
+    .process .step { border-color: rgba(255,255,255,.72); background: rgba(255,253,247,.78); backdrop-filter: blur(8px); -webkit-backdrop-filter: blur(8px); }
+    .location-grid { grid-template-columns: .85fr 1.15fr; gap: 26px; }
+    .location-card { padding: 32px; border: 1px solid rgba(39,71,83,.12); border-radius: var(--radius); background-color: rgba(255,255,255,.28); background-image: radial-gradient(rgba(39,71,83,.055) .55px, transparent .8px); background-size: 8px 8px; color: var(--color-primary-dark); backdrop-filter: blur(10px); -webkit-backdrop-filter: blur(10px); }
+    .location-card .eyebrow { color: var(--color-primary-dark); }
+    .location-card p { color: var(--color-primary-dark); }
+    .map-frame, .location-gallery figure { border-radius: var(--radius); }
+    .location-gallery { grid-template-columns: repeat(2, 1fr); gap: 18px; margin-top: 28px; }
+    .location-gallery figure { border: 1px solid var(--color-line); background: var(--color-white); }
+    .location-gallery img, .location-gallery figure:nth-child(2) img { height: 260px; }
+    .faq-layout { grid-template-columns: .75fr 1.25fr; gap: 60px; }
+    .faq-layout .section-heading { max-width: 430px; }
+    .contact { padding: 82px 0; background: var(--color-blush-light); }
+    .contact-panel { grid-template-columns: 1fr auto; gap: 30px; padding: clamp(28px, 6vw, 58px); border-radius: 30px; background: var(--color-white); box-shadow: var(--shadow); }
+    .contact-links { gap: 12px; }
+    .footer { padding: 27px 0; }
+    .whatsapp-float { border: 2px solid white; border-radius: 50%; background: #287d58; box-shadow: 0 8px 24px rgba(20,65,44,.25); transition: transform .2s ease; }
+    .whatsapp-float:hover { transform: translateY(-3px); }
+    .photo-sheen { display: none; }
+    .instagram-section { background: var(--color-paper); }
+    .instagram-track { scrollbar-width: thin; }
+    .instagram-post { border-radius: 6px; background: var(--color-soft); }
+    .instagram-post img { transition: none; }
+    .instagram-post:hover img { transform: none; }
+    @media (max-width: 900px) {
+      .services-grid { grid-template-columns: repeat(2,1fr); }
+      .about-grid { grid-template-columns: .82fr 1.18fr; gap: 40px; }
+    }
+    @media (max-width: 720px) {
+      .hero { padding: 42px 0 62px; }
+      .hero::before { top: 36%; right: -160px; width: 420px; height: 420px; }
+      h1 { font-size: clamp(3rem, 13vw, 5rem); }
+      h2 { font-size: clamp(2.35rem, 10vw, 3.5rem); }
+      .portrait-frame { min-height: 350px; width: min(100%, 440px); margin: 0 auto; }
+      .portrait-frame > img.portrait-foreground { height: 108%; max-width: 78%; }
+      .about-grid, .location-grid, .faq-layout { grid-template-columns: 1fr; gap: 32px; }
+      .about-art { min-height: 300px; order: 2; }
+      .steps { grid-template-columns: 1fr; }
+      .location-gallery { grid-template-columns: 1fr; }
+      .location-gallery img, .location-gallery figure:nth-child(2) img { height: 230px; }
+      .contact-panel { grid-template-columns: 1fr; }
+      .contact-links { flex-direction: column; align-items: flex-start; gap: 14px; }
+    }
+    @media (max-width: 430px) { .services-grid { grid-template-columns: 1fr; } }
+
+    /* Abertura em tela cheia e apresentação do nome. */
+    .site-header { position: absolute; inset: 0 0 auto; width: 100%; border: 0; background: transparent; backdrop-filter: none; }
+    .site-header .brand, .site-header .nav-links a { color: var(--color-ink); }
+    .hero-intro { position: relative; display: flex; min-height: 100vh; min-height: 100svh; align-items: center; overflow: hidden; isolation: isolate; background: var(--color-lavender); }
+    .hero-intro-backdrop { position: absolute; z-index: 0; inset: -8px; width: calc(100% + 16px); height: calc(100% + 16px); max-width: none; object-fit: cover; object-position: center; filter: blur(5px); transform: scale(1.02); }
+    .hero-intro-wash { position: absolute; z-index: 1; inset: 0; background: linear-gradient(90deg, rgba(244,243,246,.84) 0%, rgba(244,243,246,.68) 43%, rgba(220,226,236,.22) 100%); }
+    .hero-intro-grid { position: relative; z-index: 2; display: flex; min-height: 100vh; min-height: 100svh; align-items: center; }
+    .hero-intro-copy { position: relative; z-index: 3; width: min(52%, 620px); padding-top: 58px; }
+    .hero-intro-copy .eyebrow { margin: 18px 0 0; color: var(--color-primary-dark); letter-spacing: .11em; }
+    .hero-intro-copy h1 { max-width: 650px; margin: 0; color: var(--color-ink); font-family: "DM Serif Display", Georgia, serif; font-weight: 400; -webkit-text-stroke: .25px #fff; paint-order: stroke fill; font-size: clamp(3.8rem, 8vw, 7.2rem); line-height: .98; letter-spacing: -.035em; }
+    .hero-intro-portrait { position: absolute; z-index: 2; right: clamp(20px, 7vw, 110px); bottom: 0; width: auto; height: 88%; max-width: 54%; object-fit: contain; object-position: bottom center; filter: url(#portrait-white-outline) drop-shadow(0 16px 24px rgba(42,55,69,.17)); transform: translateX(5%); }
+    .hero-scroll-cue { position: absolute; z-index: 4; right: 50%; bottom: 22px; display: grid; width: 44px; height: 44px; place-items: center; border: 1px solid rgba(41,73,87,.36); border-radius: 50%; color: var(--color-ink); transform: translateX(50%); }
+    .hero-scroll-cue svg { width: 20px; height: 20px; }
+    .hero-followup { padding-top: clamp(72px, 10vw, 132px); padding-bottom: clamp(72px, 10vw, 132px); background-color: var(--color-paper); background-image: radial-gradient(rgba(41,73,87,.035) .65px, transparent .8px); background-size: 8px 8px; }
+    .hero-followup-copy { max-width: 860px; }
+    .hero-followup-copy h2 { max-width: 800px; font-size: clamp(2.65rem, 6vw, 5rem); }
+    .hero-followup-copy .lead { max-width: 730px; }
+    .hero-followup-copy .hero-note { max-width: 620px; }
+    @media (max-width: 900px) {
+      .hero-intro-copy { width: 54%; }
+      .hero-intro-portrait { right: -2%; height: 76%; max-width: 62%; }
+    }
+    @media (max-width: 720px) {
+      .site-header { background: rgba(244,243,246,.32); backdrop-filter: blur(8px); }
+      .hero-intro, .hero-intro-grid { min-height: 100vh; min-height: 100svh; }
+      .hero-intro-backdrop { object-position: 62% center; filter: blur(4px); }
+      .hero-intro-wash { background: linear-gradient(180deg, rgba(244,243,246,.76), rgba(244,243,246,.46) 48%, rgba(220,226,236,.12)); }
+      .hero-intro-copy { align-self: flex-start; width: 76%; padding-top: clamp(150px, 23vh, 220px); }
+      .hero-intro-copy .eyebrow { font-size: .68rem; }
+      .hero-intro-copy h1 { font-size: clamp(3.3rem, 12vw, 5rem); }
+      .hero-intro-portrait { right: -6%; height: 66%; max-width: 86%; }
+      .hero-scroll-cue { right: auto; left: 20px; bottom: 18px; transform: none; }
+      .hero-followup { padding-top: 72px; padding-bottom: 72px; }
+    }
+    @media (max-width: 430px) {
+      .hero-intro-copy { width: 88%; }
+      .hero-intro-copy h1 { font-size: clamp(3rem, 12vw, 4rem); }
+      .hero-intro-portrait { right: -12%; height: 61%; max-width: 96%; }
+    }
+  </style>
+</head>
+<body>
+  <svg aria-hidden="true" focusable="false" width="0" height="0" style="position:absolute;overflow:hidden">
+    <filter id="portrait-white-outline" x="-20%" y="-12%" width="140%" height="124%">
+      <feMorphology in="SourceAlpha" operator="dilate" radius="5" result="expanded-alpha" />
+      <feFlood flood-color="#fff" result="outline-color" />
+      <feComposite in="outline-color" in2="expanded-alpha" operator="in" result="white-outline" />
+      <feMerge><feMergeNode in="white-outline" /><feMergeNode in="SourceGraphic" /></feMerge>
+    </filter>
+  </svg>
+  <a class="skip-link" href="#conteudo">Pular para o conteúdo</a>
+  <header class="site-header">
+    <div class="container nav-wrap">
+      <a class="brand" href="#inicio" aria-label="Érika Sales Vieira, início"><span class="brand-mark"><img src="fotos/IMG_2461.jpg" alt=""></span><span>Érika Sales Vieira</span></a>
+      <button class="menu-toggle" type="button" aria-label="Abrir menu" aria-expanded="false" aria-controls="menu-principal">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><path d="M4 7h16M4 12h16M4 17h16"/></svg>
+      </button>
+      <nav aria-label="Navegação principal">
+        <ul class="nav-links" id="menu-principal">
+          <li><a href="#inicio">Início</a></li><li><a href="#sobre">Sobre</a></li><li><a href="#atuacao">Como atuo</a></li><li><a href="#atendimento">Atendimento</a></li><li><a href="#contato">Contato</a></li>
+        </ul>
+      </nav>
+      <a class="button nav-cta" href="https://wa.me/5512997575503?text=Ol%C3%A1%2C%20gostaria%20de%20saber%20mais%20sobre%20o%20atendimento%20psicol%C3%B3gico." target="_blank" rel="noopener noreferrer" aria-label="Entrar em contato pelo WhatsApp">WhatsApp <span aria-hidden="true">↗</span></a>
+    </div>
+  </header>
+
+  <main id="conteudo">
+    <section class="hero-intro" id="inicio" aria-labelledby="intro-name">
+      <img class="hero-intro-backdrop" src="fotos/hero-infancia.png" alt="" aria-hidden="true" fetchpriority="high">
+      <div class="hero-intro-wash" aria-hidden="true"></div>
+      <div class="container hero-intro-grid">
+        <div class="hero-intro-copy">
+          <h1 id="intro-name">Érika Sales Vieira</h1>
+          <p class="eyebrow">Psicóloga Infantil - São José dos Campos</p>
+        </div>
+        <img class="hero-intro-portrait" src="fotos/erika-23-sem-fundo.png" alt="Érika Sales Vieira, psicóloga infantil">
+      </div>
+      <a class="hero-scroll-cue" href="#hero-content" aria-label="Rolar para conhecer o trabalho">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" aria-hidden="true"><path d="M12 4v15m-6-6 6 6 6-6"/></svg>
+      </a>
+    </section>
+
+    <section class="hero-followup section" id="hero-content" aria-labelledby="hero-title">
+      <div class="container hero-followup-copy" data-reveal>
+        <h2 id="hero-title">Cuidar da infância é caminhar junto.</h2>
+        <p class="lead">Sou Érika Sales Vieira, psicóloga infantil em São José dos Campos. Acompanho crianças e famílias com psicoterapia, ABA e orientação parental, respeitando o ritmo de cada criança.</p>
+        <div class="hero-actions">
+          <a class="button" href="https://wa.me/5512997575503?text=Ol%C3%A1%2C%20gostaria%20de%20conversar%20sobre%20o%20atendimento%20para%20meu%20filho%2Fa.">Agendar pelo WhatsApp <span aria-hidden="true">↗</span></a>
+          <a class="button button-outline" href="#sobre">Conheça meu trabalho</a>
+        </div>
+        <p class="hero-note"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" aria-hidden="true"><path d="M12 21s8-4 8-11V5l-8-3-8 3v5c0 7 8 11 8 11Z"/><path d="m9 12 2 2 4-4"/></svg>Um espaço de cuidado para a criança e para quem caminha com ela.</p>
+      </div>
+    </section>
+
+    <section class="section about" id="sobre" aria-labelledby="sobre-title">
+      <div class="container about-grid">
+        <div class="about-art" data-reveal>
+          <img src="fotos/erika-26.jpg" alt="Érika Sales Vieira sorrindo enquanto lê um livro infantil" loading="lazy">
+          <div class="about-art-label" aria-hidden="true"><span>Escuta, vínculo e cuidado com cada história</span></div>
+        </div>
+        <div class="about-copy" data-reveal>
+          <p class="eyebrow">Sobre mim</p>
+          <h2 id="sobre-title">Cada criança tem seu jeito de sentir e se comunicar.</h2>
+          <p>Meu trabalho começa pela escuta da família e, em seguida, da criança. Procuro compreender o contexto, as necessidades e as potencialidades de cada história, construindo um acompanhamento cuidadoso e adequado a cada momento.</p>
+          <p>Sou psicóloga infantil, com formação em Análise do Comportamento Aplicada a transtornos do desenvolvimento e do espectro autista, e em Acompanhamento Terapêutico de Autistas. Atuo com psicoterapia infantil, acompanhamento terapêutico, orientação parental e Análise do Comportamento Aplicada.</p>
+          <div class="credential"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" aria-hidden="true"><path d="M12 3 4 7v5c0 5 3.4 8 8 9 4.6-1 8-4 8-9V7l-8-4Z"/><path d="m8.5 12 2.2 2.2 4.8-5"/></svg><p><strong>Psicóloga Infantil · CRP 06/216276</strong><br>Atendimento em São José dos Campos (SP).</p></div>
+        </div>
+      </div>
+    </section>
+
+    <section class="section" id="atuacao" aria-labelledby="atuacao-title">
+      <div class="container">
+        <div class="section-heading" data-reveal><p class="eyebrow">Como posso ajudar</p><h2 id="atuacao-title">Cuidado pensado para a criança e sua família.</h2><p>As modalidades são conversadas com a família e definidas de acordo com as necessidades e os objetivos do acompanhamento.</p></div>
+        <div class="services-grid">
+          <article class="service-card" data-reveal><span class="service-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" aria-hidden="true"><path d="M20 11.5a7.5 7.5 0 0 1-8 7.5 8 8 0 0 1-3.5-.8L4 20l1.2-4A7.2 7.2 0 0 1 4 12.5 7.5 7.5 0 0 1 12 5a7.5 7.5 0 0 1 8 6.5Z"/><path d="M9 12h.01M12 12h.01M15 12h.01"/></svg></span><h3>Psicoterapia infantil</h3><p>Um espaço em que a criança pode expressar o que sente e vive por meio da conversa, de brincadeiras e de recursos adequados à sua idade. O acompanhamento ajuda a compreender suas experiências e necessidades.</p></article>
+          <article class="service-card" data-reveal><span class="service-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" aria-hidden="true"><circle cx="9" cy="8" r="3"/><path d="M3 20v-1a6 6 0 0 1 12 0v1M16 5a3 3 0 0 1 0 6M18 14a5 5 0 0 1 3 5v1"/></svg></span><h3>Orientação parental</h3><p>Conversas com mães, pais e responsáveis para pensar estratégias e fortalecer recursos da família no cuidado cotidiano.</p></article>
+          <article class="service-card" data-reveal><span class="service-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" aria-hidden="true"><path d="M3 20h18M5 20V9l7-5 7 5v11M9 20v-6h6v6"/><path d="M9 10h.01M15 10h.01"/></svg></span><h3>Acompanhamento terapêutico</h3><p>Apoio em ambientes e situações do dia a dia, favorecendo participação, autonomia e generalização de habilidades, conforme o plano combinado.</p></article>
+          <article class="service-card" data-reveal><span class="service-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" aria-hidden="true"><path d="M9.2 4.2a3 3 0 0 0-5.1 2.1 3.2 3.2 0 0 0 .5 5.5 3.2 3.2 0 0 0 .2 5.9 3 3 0 0 0 5.5 1.2V5.8a2.3 2.3 0 0 0-1.1-1.6ZM14.8 4.2a3 3 0 0 1 5.1 2.1 3.2 3.2 0 0 1-.5 5.5 3.2 3.2 0 0 1-.2 5.9 3 3 0 0 1-5.5 1.2V5.8a2.3 2.3 0 0 1 1.1-1.6Z"/><path d="M8 8h2m-2 5h2m4-5h2m-2 5h2"/></svg></span><h3>ABA (Applied Behavior Analysis)</h3><p>A Análise do Comportamento Aplicada observa como o contexto influencia comportamentos e habilidades. A partir dessa compreensão, são definidos objetivos individualizados para apoiar novas aprendizagens e a participação da criança no cotidiano.</p></article>
+        </div>
+      </div>
+    </section>
+
+    <section class="section process" aria-labelledby="process-title">
+      <div class="container">
+        <div class="section-heading" data-reveal><p class="eyebrow">Como funciona</p><h2 id="process-title">Um caminho construído em parceria.</h2><p>As etapas podem variar conforme a necessidade da criança e da família.</p></div>
+        <div class="steps">
+          <article class="step" data-reveal><h3>Primeiro contato</h3><p>Você me conta brevemente o que motivou a busca e esclarecemos dúvidas iniciais sobre o atendimento.</p></article>
+          <article class="step" data-reveal><h3>Anamnese</h3><p>É uma conversa inicial com os responsáveis para conhecer a história da criança, seu desenvolvimento, a rotina e as questões que motivaram a busca. Esse momento ajuda a compreender o contexto familiar e a planejar os próximos passos.</p></article>
+          <article class="step" data-reveal><h3>Avaliação e intervenção</h3><p>Com as informações reunidas, realizo uma avaliação para compreender as necessidades da criança e traçar metas e objetivos para o acompanhamento.</p><p>Em seguida, iniciamos as intervenções planejadas e acompanhamos o processo junto à família.</p></article>
+        </div>
+      </div>
+    </section>
+
+    <section class="section" id="atendimento" aria-labelledby="atendimento-title">
+      <div class="container">
+        <div class="section-heading" data-reveal><p class="eyebrow">Atendimento</p><h2 id="atendimento-title">Um lugar para acolher e construir possibilidades.</h2></div>
+        <div class="location-grid">
+          <div class="location-card" data-reveal><p class="eyebrow">Onde atendo</p><h2>São José dos Campos</h2><p>Atendimento presencial.</p>
+          <div class="location-line"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" aria-hidden="true"><path d="M20 10c0 5-8 12-8 12S4 15 4 10a8 8 0 1 1 16 0Z"/><circle cx="12" cy="10" r="2.5"/></svg><span><strong>Endereço</strong><br>Rua Fernão Dias, nº 155, Jardim Esplanada<br>São José dos Campos – SP</span></div>
+          </div>
+          <div data-reveal><div class="map-frame"><iframe title="Mapa do endereço de atendimento na Rua Fernão Dias, 155, em São José dos Campos" src="https://maps.google.com/maps?q=Rua%20Fern%C3%A3o%20Dias%2C%20155%2C%20Jardim%20Esplanada%2C%20S%C3%A3o%20Jos%C3%A9%20dos%20Campos%2C%20SP&t=&z=16&ie=UTF8&iwloc=&output=embed" loading="lazy" referrerpolicy="no-referrer-when-downgrade" allowfullscreen></iframe></div><p class="map-caption">Local de atendimento no Jardim Esplanada, São José dos Campos.</p></div>
+        </div>
+        <div class="location-gallery" aria-label="Fotos do espaço de atendimento" data-reveal>
+          <figure><img src="fotos/2026-09-18 (1).jpg" alt="Fachada da clínica e vagas de estacionamento no local de atendimento" loading="lazy"><figcaption>Fachada e estacionamento</figcaption></figure>
+          <figure><img src="fotos/espaco-atendimento.jpg" alt="Área de convivência com mesa, cadeira e vista para a vegetação" loading="lazy"><figcaption>Área de convivência</figcaption></figure>
+        </div>
+      </div>
+    </section>
+
+    <section class="section faq" aria-labelledby="faq-title">
+      <div class="container faq-layout">
+        <div class="section-heading" data-reveal><p class="eyebrow">Dúvidas frequentes</p><h2 id="faq-title">Perguntas que podem surgir.</h2><p>Se ainda tiver dúvidas, podemos conversar com calma no primeiro contato.</p></div>
+        <div class="faq-list" data-reveal>
+          <details><summary>Como sei se meu filho precisa de terapia?</summary><p>Quando algo no cotidiano, nas emoções, no comportamento ou nas relações preocupa você, conversar com uma psicóloga pode ajudar a compreender o que está acontecendo. A avaliação é feita caso a caso, sem necessidade de chegar com uma resposta pronta.</p></details>
+          <details><summary>Qual a diferença entre ABA e psicoterapia?</summary><p>São formas de trabalho com objetivos e métodos diferentes, que podem ser indicadas conforme a avaliação e as necessidades da criança. ABA (Applied Behavior Analysis) observa relações entre comportamento e contexto para apoiar o desenvolvimento de habilidades; a psicoterapia oferece um espaço de cuidado e expressão emocional. A indicação é individualizada.</p></details>
+          <details><summary>Os pais participam do processo?</summary><p>Sim. A participação dos responsáveis é importante para compreender o contexto da criança e alinhar o acompanhamento. A forma e a frequência das conversas são combinadas conforme cada caso, preservando o espaço terapêutico da criança.</p></details>
+          <details><summary>Quais idades são atendidas?</summary><p>Atendo crianças a partir de 2 anos. Entre em contato para conversarmos sobre a idade e a necessidade da sua família.</p></details>
+          <details><summary>Você atende online?</summary><p>Não. Os atendimentos são exclusivamente presenciais em São José dos Campos.</p></details>
+          <details><summary>Como funciona o primeiro contato?</summary><p>Você pode me chamar pelo WhatsApp para compartilhar, de forma breve, o que está buscando. Vou explicar como funciona o atendimento e combinar os próximos passos, respeitando o sigilo profissional.</p></details>
+          <details><summary>Você conversa com pediatras e neurologistas?</summary><p>Quando há autorização dos responsáveis e isso é pertinente ao cuidado, posso dialogar com outros profissionais da rede da criança, respeitando o sigilo e os limites éticos da profissão.</p></details>
+        </div>
+      </div>
+    </section>
+
+    <section class="section instagram-section" id="instagram" aria-labelledby="instagram-title">
+      <div class="container">
+        <div class="section-heading" data-reveal><p class="eyebrow">No Instagram</p><h2 id="instagram-title">Conteúdos para acompanhar.</h2><p>Veja algumas publicações de <a href="https://www.instagram.com/psi.erikasales/" target="_blank" rel="noopener noreferrer">@psi.erikasales</a>. Selecione uma capa para abrir o conteúdo no Instagram.</p></div>
+        <div class="instagram-carousel" data-reveal>
+          <div class="instagram-track" id="instagram-track" aria-label="Carrossel de publicações do Instagram">
+            <a class="instagram-post" href="https://www.instagram.com/p/DeP9PHMxqYz/" target="_blank" rel="noopener noreferrer" aria-label="Abrir publicação sobre o momento de ajudar no Instagram"><img src="fotos/capa-instagram-02.jpg" alt="Capa do post: Você sabe a hora certa de ajudar e a hora de esperar?" loading="lazy" decoding="async"></a>
+            <a class="instagram-post" href="https://www.instagram.com/p/Dd97tWpRoI1/" target="_blank" rel="noopener noreferrer" aria-label="Abrir publicação sobre a expressão da criança no Instagram"><img src="fotos/capa-instagram-03.jpg" alt="Capa do post: Como funciona a terapia se meu filho ainda não consegue explicar o que sente?" loading="lazy" decoding="async"></a>
+            <a class="instagram-post" href="https://www.instagram.com/p/Dd4yHIvGG8z/?img_index=1" target="_blank" rel="noopener noreferrer" aria-label="Abrir publicação sobre aprendizagem no Instagram"><img src="fotos/capa-instagram-04.jpg" alt="Capa do post: Nem toda aprendizagem parece aprendizagem" loading="lazy" decoding="async"></a>
+            <a class="instagram-post" href="https://www.instagram.com/p/DeKzt9LgYuU/?img_index=1" target="_blank" rel="noopener noreferrer" aria-label="Abrir publicação sobre a raiva da criança no Instagram"><img src="fotos/capa-instagram-05.jpg" alt="Capa do post: Seu filho fica muito bravo" loading="lazy" decoding="async"></a>
+            <a class="instagram-post" href="https://www.instagram.com/p/De2ok1KG6_M/?img_index=1" target="_blank" rel="noopener noreferrer" aria-label="Abrir publicação sobre previsibilidade no Instagram"><img src="fotos/capa-instagram-06.jpg" alt="Capa do post: Vamos falar sobre previsibilidade" loading="lazy" decoding="async"></a>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="contact" id="contato" aria-labelledby="contato-title">
+      <div class="container contact-panel" data-reveal>
+        <div><p class="eyebrow">Vamos conversar</p><h2 id="contato-title">O primeiro passo pode ser uma conversa.</h2><p>Se você está buscando acompanhamento para seu filho, entre em contato para conhecer melhor o trabalho e tirar suas dúvidas.</p></div>
+        <div class="contact-links">
+          <a class="button" href="https://wa.me/5512997575503?text=Ol%C3%A1%2C%20gostaria%20de%20conversar%20sobre%20o%20atendimento%20psicol%C3%B3gico%20infantil.">Falar pelo WhatsApp <span aria-hidden="true">↗</span></a>
+          <a class="text-link" href="tel:+5512997575503" aria-label="Ligar para Érika Sales Vieira no telefone (12) 99757-5503"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" aria-hidden="true"><path d="M6.6 3h2.8l1.4 4.2-2 1.5a14.5 14.5 0 0 0 6.5 6.5l1.5-2 4.2 1.4v2.8a2 2 0 0 1-2.2 2A17.8 17.8 0 0 1 4.6 5.2 2 2 0 0 1 6.6 3Z"/></svg>(12) 99757-5503</a>
+          <a class="text-link" href="https://www.instagram.com/psi.erikasales/" target="_blank" rel="noopener noreferrer"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" aria-hidden="true"><rect x="3" y="3" width="18" height="18" rx="5"/><circle cx="12" cy="12" r="4"/><path d="M17.5 6.5h.01"/></svg>@psi.erikasales</a>
+          <a class="text-link" href="mailto:erikasalespsi@gmail.com"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" aria-hidden="true"><rect x="3" y="5" width="18" height="14" rx="2"/><path d="m4 7 8 6 8-6"/></svg>erikasalespsi@gmail.com</a>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer class="footer">
+    <div class="container footer-inner"><div><p class="footer-name">Érika Sales Vieira · Psicóloga Infantil</p><p>CRP 06/216276 · São José dos Campos, SP</p></div><p>© <span id="year">2026</span> Érika Sales Vieira. Todos os direitos reservados.</p></div>
+  </footer>
+
+    <a class="whatsapp-float" href="https://wa.me/5512997575503?text=Ol%C3%A1%2C%20gostaria%20de%20saber%20mais%20sobre%20o%20atendimento%20psicol%C3%B3gico." target="_blank" rel="noopener noreferrer" aria-label="Conversar com Érika Sales Vieira pelo WhatsApp">
+    <svg viewBox="0 0 32 32" fill="currentColor" aria-hidden="true"><path d="M16.04 3C8.88 3 3.06 8.76 3.06 15.86c0 2.27.6 4.49 1.75 6.43L3 29l6.92-1.8a13.1 13.1 0 0 0 6.12 1.52h.01c7.15 0 12.97-5.77 12.97-12.86 0-3.44-1.35-6.67-3.8-9.1A12.94 12.94 0 0 0 16.04 3Zm0 23.54h-.01a10.9 10.9 0 0 1-5.55-1.51l-.4-.24-4.1 1.07 1.1-3.98-.26-.41a10.67 10.67 0 0 1-1.66-5.61c0-5.97 4.89-10.82 10.9-10.82 2.91 0 5.65 1.13 7.7 3.18a10.7 10.7 0 0 1 3.2 7.63c0 5.97-4.9 10.82-10.92 10.82Zm5.98-8.1c-.33-.16-1.93-.95-2.23-1.06-.3-.11-.52-.16-.73.16-.22.32-.84 1.06-1.03 1.27-.19.22-.38.24-.71.08-.33-.16-1.39-.51-2.65-1.62-.98-.86-1.64-1.91-1.83-2.23-.19-.32-.02-.49.14-.65.15-.14.33-.38.49-.57.16-.19.22-.32.33-.54.11-.21.06-.4-.03-.57-.08-.16-.73-1.75-1-2.4-.26-.63-.53-.54-.73-.55h-.62c-.22 0-.57.08-.87.4-.3.32-1.14 1.11-1.14 2.7 0 1.59 1.16 3.13 1.32 3.35.16.21 2.28 3.44 5.52 4.82.77.33 1.37.53 1.84.68.77.24 1.47.21 2.02.13.62-.09 1.93-.78 2.2-1.54.27-.75.27-1.4.19-1.54-.08-.13-.3-.21-.62-.38Z"/></svg>
+  </a>
+
+  <script>
+    // Menu acessível para celular e animações discretas, respeitando a preferência por movimento reduzido.
+    const menuButton = document.querySelector('.menu-toggle');
+    const menu = document.querySelector('#menu-principal');
+    menuButton.addEventListener('click', () => {
+      const isOpen = menu.classList.toggle('is-open');
+      menuButton.setAttribute('aria-expanded', String(isOpen));
+      menuButton.setAttribute('aria-label', isOpen ? 'Fechar menu' : 'Abrir menu');
+    });
+    menu.querySelectorAll('a').forEach(link => link.addEventListener('click', () => {
+      menu.classList.remove('is-open');
+      menuButton.setAttribute('aria-expanded', 'false');
+      menuButton.setAttribute('aria-label', 'Abrir menu');
+    }));
+    document.querySelector('#year').textContent = new Date().getFullYear();
+    if ('IntersectionObserver' in window && !window.matchMedia('(prefers-reduced-motion: reduce)').matches) {
+      const observer = new IntersectionObserver(entries => entries.forEach(entry => {
+        if (entry.isIntersecting) { entry.target.classList.add('is-visible'); observer.unobserve(entry.target); }
+      }), { threshold: 0.12 });
+      document.querySelectorAll('[data-reveal]').forEach(element => observer.observe(element));
+    } else {
+      document.querySelectorAll('[data-reveal]').forEach(element => element.classList.add('is-visible'));
+    }
+  </script>
+</body>
+</html>
