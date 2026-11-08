@@ -309,6 +309,9 @@
     .service-icon { width: 48px; height: 48px; margin-bottom: 25px; border-radius: 4.5px; }
     .step { padding: 26px 24px 24px; border-radius: 6px; background: var(--color-white); }
     .step::before { width: 38px; height: 38px; margin-bottom: 20px; background: var(--color-primary); }
+    .step::before { display: none; }
+    .step-icon { display: grid; width: 44px; height: 44px; margin-bottom: 20px; border-radius: 50%; background: var(--color-primary); color: var(--color-white); place-items: center; }
+    .step-icon svg { width: 22px; height: 22px; }
     .process { position: relative; isolation: isolate; overflow: hidden; background: var(--color-lavender-light); }
     .process::before, .process::after { position: absolute; z-index: -1; inset: 0; content: ""; pointer-events: none; }
     .process::before { inset: -10px; background: url("fotos/espaco-atendimento.jpg") center 56% / cover; filter: blur(5px); transform: scale(1.03); }
@@ -360,7 +363,8 @@
     @media (max-width: 430px) { .services-grid { grid-template-columns: 1fr; } }
 
     /* Abertura em tela cheia e apresentação do nome. */
-    .site-header { position: absolute; inset: 0 0 auto; width: 100%; border: 0; background: transparent; backdrop-filter: none; }
+    /* Menu fixo: acompanha a rolagem, com fundo transparente e leve desfoque para manter a leitura sobre o conteúdo. */
+    .site-header { position: fixed; inset: 0 0 auto; width: 100%; border: 0; background: transparent; -webkit-backdrop-filter: blur(6px); backdrop-filter: blur(6px); }
     .site-header .brand, .site-header .nav-links a { color: var(--color-ink); }
     .hero-intro { position: relative; display: flex; min-height: 100vh; min-height: 100svh; align-items: center; overflow: hidden; isolation: isolate; background: var(--color-lavender); }
     .hero-intro-backdrop { position: absolute; z-index: 0; inset: -8px; width: calc(100% + 16px); height: calc(100% + 16px); max-width: none; object-fit: cover; object-position: center; filter: blur(5px); transform: scale(1.02); }
@@ -382,7 +386,7 @@
       .hero-intro-portrait { right: -2%; height: 76%; max-width: 62%; }
     }
     @media (max-width: 720px) {
-      .site-header { background: rgba(244,243,246,.32); backdrop-filter: blur(8px); }
+      .site-header { background: transparent; -webkit-backdrop-filter: blur(6px); backdrop-filter: blur(6px); }
       .hero-intro, .hero-intro-grid { min-height: 100vh; min-height: 100svh; }
       .hero-intro-backdrop { object-position: 62% center; filter: blur(4px); }
       .hero-intro-wash { background: linear-gradient(180deg, rgba(244,243,246,.76), rgba(244,243,246,.46) 48%, rgba(220,226,236,.12)); }
@@ -485,9 +489,9 @@
       <div class="container">
         <div class="section-heading" data-reveal><p class="eyebrow">Como funciona</p><h2 id="process-title">Um caminho construído em parceria.</h2><p>As etapas podem variar conforme a necessidade da criança e da família.</p></div>
         <div class="steps">
-          <article class="step" data-reveal><h3>Primeiro contato</h3><p>Você me conta brevemente o que motivou a busca e esclarecemos dúvidas iniciais sobre o atendimento.</p></article>
-          <article class="step" data-reveal><h3>Anamnese</h3><p>É uma conversa inicial com os responsáveis para conhecer a história da criança, seu desenvolvimento, a rotina e as questões que motivaram a busca. Esse momento ajuda a compreender o contexto familiar e a planejar os próximos passos.</p></article>
-          <article class="step" data-reveal><h3>Avaliação e intervenção</h3><p>Com as informações reunidas, realizo uma avaliação para compreender as necessidades da criança e traçar metas e objetivos para o acompanhamento.</p><p>Em seguida, iniciamos as intervenções planejadas e acompanhamos o processo junto à família.</p></article>
+          <article class="step" data-reveal><span class="step-icon" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M21 12a8 8 0 0 1-11.7 7.1L4 20.5l1.4-4.6A8 8 0 1 1 21 12Z"/><path d="M8.5 11.5h.01M12 11.5h.01M15.5 11.5h.01"/></svg></span><h3>Primeiro contato</h3><p>Você me conta brevemente o que motivou a busca e esclarecemos dúvidas iniciais sobre o atendimento.</p></article>
+          <article class="step" data-reveal><span class="step-icon" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M9 6h11M9 12h11M9 18h11"/><path d="M4 6h.01M4 12h.01M4 18h.01" stroke-width="2.6"/></svg></span><h3>Anamnese</h3><p>É uma conversa inicial com os responsáveis para conhecer a história da criança, seu desenvolvimento, a rotina e as questões que motivaram a busca. Esse momento ajuda a compreender o contexto familiar e a planejar os próximos passos.</p></article>
+          <article class="step" data-reveal><span class="step-icon" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M12 20.5s-7.5-4.6-9.2-9.6C1.7 7.5 3.8 4.5 7 4.5c2 0 3.6 1.1 5 3 1.4-1.9 3-3 5-3 3.2 0 5.3 3 4.2 6.4-1.7 5-9.2 9.6-9.2 9.6Z"/></svg></span><h3>Avaliação e intervenção</h3><p>Com as informações reunidas, realizo uma avaliação para compreender as necessidades da criança e traçar metas e objetivos para o acompanhamento.</p><p>Em seguida, iniciamos as intervenções planejadas e acompanhamos o processo junto à família.</p></article>
         </div>
       </div>
     </section>
@@ -513,10 +517,10 @@
         <div class="section-heading" data-reveal><p class="eyebrow">Dúvidas frequentes</p><h2 id="faq-title">Perguntas que podem surgir.</h2><p>Se ainda tiver dúvidas, podemos conversar com calma no primeiro contato.</p></div>
         <div class="faq-list" data-reveal>
           <details><summary>Como sei se meu filho precisa de terapia?</summary><p>Quando algo no cotidiano, nas emoções, no comportamento ou nas relações preocupa você, conversar com uma psicóloga pode ajudar a compreender o que está acontecendo. A avaliação é feita caso a caso, sem necessidade de chegar com uma resposta pronta.</p></details>
-          <details><summary>Qual a diferença entre ABA e psicoterapia?</summary><p>São formas de trabalho com objetivos e métodos diferentes, que podem ser indicadas conforme a avaliação e as necessidades da criança. ABA (Applied Behavior Analysis) observa relações entre comportamento e contexto para apoiar o desenvolvimento de habilidades; a psicoterapia oferece um espaço de cuidado e expressão emocional. A indicação é individualizada.</p></details>
           <details><summary>Os pais participam do processo?</summary><p>Sim. A participação dos responsáveis é importante para compreender o contexto da criança e alinhar o acompanhamento. A forma e a frequência das conversas são combinadas conforme cada caso, preservando o espaço terapêutico da criança.</p></details>
           <details><summary>Quais idades são atendidas?</summary><p>Atendo crianças a partir de 2 anos. Entre em contato para conversarmos sobre a idade e a necessidade da sua família.</p></details>
           <details><summary>Você atende online?</summary><p>Não. Os atendimentos são exclusivamente presenciais em São José dos Campos.</p></details>
+          <details><summary>Você atende por convênio?</summary><p>No momento, não atendo por convênios. Escolhi trabalhar com atendimentos particulares para oferecer um acompanhamento cuidadoso e individualizado, respeitando o tempo e as necessidades de cada criança e família. Emito nota fiscal para que você possa consultar seu plano sobre a possibilidade de reembolso, conforme as regras do seu contrato.</p></details>
           <details><summary>Como funciona o primeiro contato?</summary><p>Você pode me chamar pelo WhatsApp para compartilhar, de forma breve, o que está buscando. Vou explicar como funciona o atendimento e combinar os próximos passos, respeitando o sigilo profissional.</p></details>
           <details><summary>Você conversa com pediatras e neurologistas?</summary><p>Quando há autorização dos responsáveis e isso é pertinente ao cuidado, posso dialogar com outros profissionais da rede da criança, respeitando o sigilo e os limites éticos da profissão.</p></details>
         </div>
@@ -545,7 +549,7 @@
           <a class="button" href="https://wa.me/5512997575503?text=Ol%C3%A1%2C%20gostaria%20de%20conversar%20sobre%20o%20atendimento%20psicol%C3%B3gico%20infantil.">Falar pelo WhatsApp <span aria-hidden="true">↗</span></a>
           <a class="text-link" href="tel:+5512997575503" aria-label="Ligar para Érika Sales Vieira no telefone (12) 99757-5503"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" aria-hidden="true"><path d="M6.6 3h2.8l1.4 4.2-2 1.5a14.5 14.5 0 0 0 6.5 6.5l1.5-2 4.2 1.4v2.8a2 2 0 0 1-2.2 2A17.8 17.8 0 0 1 4.6 5.2 2 2 0 0 1 6.6 3Z"/></svg>(12) 99757-5503</a>
           <a class="text-link" href="https://www.instagram.com/psi.erikasales/" target="_blank" rel="noopener noreferrer"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" aria-hidden="true"><rect x="3" y="3" width="18" height="18" rx="5"/><circle cx="12" cy="12" r="4"/><path d="M17.5 6.5h.01"/></svg>@psi.erikasales</a>
-          <a class="text-link" href="mailto:erikasalespsi@gmail.com"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" aria-hidden="true"><rect x="3" y="5" width="18" height="14" rx="2"/><path d="m4 7 8 6 8-6"/></svg>erikasalespsi@gmail.com</a>
+          <a class="text-link" href="mailto:contato@erikasalesvieira.com.br"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" aria-hidden="true"><rect x="3" y="5" width="18" height="14" rx="2"/><path d="m4 7 8 6 8-6"/></svg>contato@erikasalesvieira.com.br</a>
         </div>
       </div>
     </section>
